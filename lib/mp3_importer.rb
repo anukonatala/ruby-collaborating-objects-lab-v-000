@@ -20,7 +20,7 @@ attr_accessor :path
  # end
   
   def files
-    allfiles = Dir.glob("#{path}/*.mp3").collect { }
+    allfiles = Dir.glob("#{path}/*.mp3").collect {|file| file.gsub()}
     
    
     @@filenames
