@@ -21,13 +21,15 @@ attr_accessor :path
   
   def files
     allfiles = Dir.glob("#{path}/*.mp3").collect {|file| file.gsub("#{path}","")}
-    binding.pry
   end
 
  
 
   def import
-    files.each {|file| Song.new_by_filename(file)}
+    files.each |file| do
+      Song.new_by_filename(file)
+      binding.pry
+    end
   end
   
 end
