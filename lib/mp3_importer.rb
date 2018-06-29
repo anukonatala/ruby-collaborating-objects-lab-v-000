@@ -20,12 +20,9 @@ attr_accessor :path
  # end
   
   def files
-    allfiles = Dir.glob("#{path}/*.mp3").collect
-    allfiles.each do |file|
-       if file.end_with? '.mp3'
-         @@filenames << file
-       end
-     end
+    allfiles = Dir.glob("#{path}/*.mp3").collect { }
+    
+   
     @@filenames
   end
 
