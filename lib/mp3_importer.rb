@@ -27,7 +27,7 @@ attr_accessor :path
 
   def import
     files.each do |file| 
-      song = Song.new_by_filename(file)
+       Song.new_by_filename(file)
     end
   end
   
