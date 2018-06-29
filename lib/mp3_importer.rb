@@ -9,8 +9,18 @@ attr_accessor :path
     
   end
   
+  #def files
+  #  allfiles = Dir.entries(@path)
+ #   allfiles.each do |file|
+ #      if file.end_with? '.mp3'
+ #        @@filenames << file
+  #     end
+  #   end
+  #  @@filenames
+ # end
+  
   def files
-    allfiles = Dir.entries(@path)
+    allfiles = Dir.glob("#{path}/*.mp3").collect
     allfiles.each do |file|
        if file.end_with? '.mp3'
          @@filenames << file
